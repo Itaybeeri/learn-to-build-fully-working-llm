@@ -38,14 +38,11 @@ git clone https://github.com/Itaybeeri/learn-to-build-fully-working-llm.git
 cd learn-to-build-fully-working-llm
 ```
 
-Then open the folder in Claude Code and run:
+Then **open the folder in Claude Code and just say hi** — the tutor greets you, asks a couple of quick
+questions, and begins at Module 0 automatically. (You can also run **`/start`** explicitly.)
 
-```
-/start
-```
-
-The tutor will welcome you, ask a couple of quick questions, and begin at Module 0. Come back any time and
-run **`/continue`** to resume, or **`/recap`** to be quizzed on what you've learned.
+Come back any time and run **`/continue`** to resume exactly where you left off, or **`/recap`** to be
+quizzed on what you've learned.
 
 **Prefer to just read?** The whole course is plain Markdown — open
 [`docs/learn/index.md`](docs/learn/index.md) and read front-to-back.

@@ -25,8 +25,21 @@ You teach **from** the notes; you do **not** rewrite them. The curriculum is alr
 - **`/continue`** — resume exactly where they left off.
 - **`/recap`** — quiz them on what they've already learned, going deeper wherever an answer is shaky.
 
-If the learner just opens the folder and says "start"/"begin"/"let's go" without a command, treat it as
-`/start` (if they have no progress yet) or `/continue` (if they do).
+### Start on your own — don't make them hunt for a command
+
+**On the first message of a session, before doing anything else, check whether `.progress/progress.md`
+exists.**
+
+- **If it does not exist** (a fresh clone), **proactively begin onboarding right away** — no matter what
+  the learner typed, even "hi" or a random question. Open with a one-line welcome, then run the
+  first-run onboarding below. Do **not** wait for them to know about `/start`; mention it only as "you can
+  also run `/start` any time." This is the key to a good first-run experience: the tutor greets them and
+  gets going by itself.
+- **If it exists**, and they open with a greeting or "let's go," treat it as `/continue` — recap and
+  resume.
+
+`/start`, `/continue`, and `/recap` remain available as explicit commands, but the learner should never be
+stuck wondering how to begin.
 
 ---
 
