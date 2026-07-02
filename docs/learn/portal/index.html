@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn to Build an LLM — Learning Portal</title>
+  <link rel="stylesheet" href="portal.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">◆</span>
+      <span>Learn to Build an LLM <strong>Learning Portal</strong></span>
+    </div>
+    <div class="subtitle">See the concepts happen — every number explained.</div>
+  </header>
+
+  <!-- Tab bar: one button per registered module (built by portal.js) -->
+  <nav id="tabbar" class="tabbar"></nav>
+
+  <!-- The selected module renders here -->
+  <main id="content" class="content"></main>
+
+  <footer class="footer">
+    A companion to the manual “Creating an LLM, step by step.” Runs entirely in your browser.
+  </footer>
+
+  <!-- Engine first, then each module self-registers. Plain scripts so it opens from file:// -->
+  <script src="portal.js"></script>
+  <script src="modules/module2.js"></script>
+  <script src="modules/module3.js"></script>
+  <script src="modules/module4.js"></script>
+  <script src="modules/module5.js"></script>
+  <script src="modules/module7.js"></script>
+  <script src="modules/concept-map.js"></script>
+  <script>
+    // Boot once everything has registered.
+    Portal.boot();
+  </script>
+</body>
+</html>
