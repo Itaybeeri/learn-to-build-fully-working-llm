@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/media/banner.png" alt="Learn to Build a Fully Working LLM — from first principles, taught by an AI tutor" width="100%">
+</p>
+
 # Learn to Build a Fully Working LLM
 
 **A from-scratch course that takes you from "what is a vector?" all the way to building, training, and
