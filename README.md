@@ -2,35 +2,59 @@
   <img src="docs/media/banner.png" alt="Learn to Build a Fully Working LLM — from first principles, taught by an AI tutor" width="100%">
 </p>
 
-# Learn to Build a Fully Working LLM
+<h1 align="center">Learn to Build a Fully Working LLM</h1>
 
-**A from-scratch course that takes you from "what is a vector?" all the way to building, training, and
-running your own tiny GPT — taught by an AI tutor that teaches you Socratically and remembers where you
-left off.**
+<p align="center">
+  <b>From &ldquo;what is a vector?&rdquo; to your own tiny GPT.</b><br>
+  A from-scratch course taught by an AI tutor that quizzes you Socratically&nbsp;&mdash;<br>
+  and remembers exactly where you left off.
+</p>
 
-Most "build a GPT" material is static text that assumes you already know the math and the ML. This is the
-opposite: it assumes **nothing**. Every term is defined from zero, intuition comes before the math, and
-you never rely on an idea that hasn't been taught yet. By the end you will have built a working
-character-level GPT **twice** — once in PyTorch, once in **pure NumPy with every gradient written by
-hand** — trained it, and watched it generate text.
+<p align="center">
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/github/license/Itaybeeri/learn-to-build-fully-working-llm?style=for-the-badge&color=4FE7C4&labelColor=0B0F17"></a>
+  <a href="https://github.com/Itaybeeri/learn-to-build-fully-working-llm/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/Itaybeeri/learn-to-build-fully-working-llm?style=for-the-badge&color=4FE7C4&labelColor=0B0F17&logo=github"></a>
+  <img alt="Last commit" src="https://img.shields.io/github/last-commit/Itaybeeri/learn-to-build-fully-working-llm?style=for-the-badge&color=2AA9C9&labelColor=0B0F17">
+  <img alt="Python 3.12" src="https://img.shields.io/badge/Python-3.12-2AA9C9?style=for-the-badge&labelColor=0B0F17&logo=python&logoColor=white">
+  <img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-FF7A66?style=for-the-badge&labelColor=0B0F17">
+</p>
 
-> Newer to ML and to higher math? That's exactly who this is for.
-
----
-
-## What makes it different
-
-- 🎓 **An AI Socratic tutor, not a wall of text.** It teaches a concept, then *asks you a question*. If
-  you're stuck, it doesn't dump the answer — it guides you with hints and easier questions until *you* get
-  there.
-- 💾 **It remembers where you left off.** Stop any time; run `/continue` and pick up mid-concept. Your
-  progress is saved privately on your own machine.
-- 🔬 **See it happen.** A no-install browser **portal** lets you watch a neuron fire, data flow forward,
-  loss drop, attention blend words together, and your tiny GPT tokenize, train, and generate.
-- 🛠️ **You build the real thing.** The capstone is a working tiny GPT — including a from-scratch NumPy
-  version where you implement every forward and backward pass yourself (gradient-checked to ~1e-7).
+<p align="center">
+  <a href="#quickstart"><b>Quickstart</b></a> &nbsp;·&nbsp;
+  <a href="#what-youll-learn"><b>Curriculum</b></a> &nbsp;·&nbsp;
+  <a href="#the-portal"><b>The portal</b></a> &nbsp;·&nbsp;
+  <a href="CONTRIBUTING.md"><b>Contributing</b></a>
+</p>
 
 ---
+
+> **Most "build a GPT" tutorials assume you already know the math and the ML. This one assumes nothing.**
+> Every term is defined from zero, intuition comes before the math, and you never rely on an idea that
+> hasn't been taught yet. By the end you'll have built a working character-level GPT **twice** — once in
+> PyTorch, once in **pure NumPy with every gradient written by hand** — trained it, and watched it generate
+> text.
+
+<p align="center"><i>Newer to ML and to higher math? That's exactly who this is for.</i></p>
+
+## ✨ Why it's different
+
+|  |  |
+|---|---|
+| 🎓 **An AI Socratic tutor, not a wall of text** | It teaches a concept, then *asks you a question*. Stuck? It doesn't dump the answer — it guides you with hints and easier questions until *you* get there. |
+| 💾 **It remembers where you left off** | Stop any time; run `/continue` and pick up mid-concept. Your progress is saved privately on your own machine. |
+| 🔬 **See it happen** | A no-install browser **portal** lets you watch a neuron fire, loss drop, attention blend words together, and your tiny GPT tokenize, train, and generate. |
+| 🛠️ **You build the real thing** | The capstone is a working tiny GPT — including a from-scratch NumPy version where you implement every forward and backward pass yourself (gradient-checked to ~1e-7). |
+
+## The portal
+
+A no-install, browser-based companion — **one tab per module** — so you can *see* the concepts instead of
+just reading about them. Watch a neuron light up, step through *forward → loss → backward → update* one
+number at a time, blend word vectors with attention, and train the tiny GPT.
+
+<p align="center">
+  <img src="docs/media/portal.png" alt="The interactive learning portal — a single neuron demo with a live network diagram, sliders, and the five-stage forward pass narrated number by number" width="88%">
+</p>
+
+<p align="center"><sub>Open <code>docs/learn/portal/index.html</code> in any browser — no install, no build step.</sub></p>
 
 ## Quickstart
 
@@ -45,18 +69,17 @@ cd learn-to-build-fully-working-llm
 Then **open the folder in Claude Code and just say hi** — the tutor greets you, asks a couple of quick
 questions, and begins at Module 0 automatically. (You can also run **`/start`** explicitly.)
 
-Come back any time and run **`/continue`** to resume exactly where you left off, or **`/recap`** to be
-quizzed on what you've learned.
+| Command | What it does |
+|---|---|
+| **`/start`** | First run — onboard and begin at Module 0 |
+| **`/continue`** | Resume exactly where you left off |
+| **`/recap`** | Get quizzed on what you've learned so far |
 
-**Prefer to just read?** The whole course is plain Markdown — open
-[`docs/learn/index.md`](docs/learn/index.md) and read front-to-back.
+> **Prefer to just read?** The whole course is plain Markdown — open
+> [`docs/learn/index.md`](docs/learn/index.md) and read front-to-back.
+> **Want the visuals?** Open [`docs/learn/portal/index.html`](docs/learn/portal/index.html) in a browser.
 
-**Want to see the visuals?** Open [`docs/learn/portal/index.html`](docs/learn/portal/index.html) in a
-browser (or run `docs/learn/portal/serve.cmd` on Windows).
-
----
-
-## What you'll learn (the roadmap)
+## What you'll learn
 
 | Module | You'll understand… |
 |---|---|
@@ -67,11 +90,9 @@ browser (or run `docs/learn/portal/serve.cmd` on Windows).
 | **4 · The Transformer** | Attention, self-attention (Q/K/V), multi-head attention, positional info, and the full transformer block |
 | **5 · Training LLMs** | Next-token prediction, datasets & scale, what "learning" adjusts, overfitting vs. generalization |
 | **6 · Using & aligning LLMs** | Sampling (temperature, top-k/p), context windows, fine-tuning, instruction tuning & RLHF, limitations |
-| **7 · Capstone** | **Build a tiny GPT** — in PyTorch, then again in pure NumPy from scratch; train it, scale it up, and generate text |
+| **7 · Capstone** | **Build a tiny GPT** — in PyTorch, then again in pure NumPy from scratch; train it, scale it up, generate text |
 
-Full details and links to every note are in [`docs/learn/index.md`](docs/learn/index.md).
-
----
+Full details and links to every note are in **[`docs/learn/index.md`](docs/learn/index.md)**.
 
 ## How progress works (and why contributors are safe)
 
@@ -80,24 +101,23 @@ shows up in `git status` and can never end up in a pull request. So you can lear
 *and* contribute improvements without your progress ever leaking. See
 [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
----
-
 ## Contributing
 
-Clearer explanations, fixes, and new demos are very welcome — see [`CONTRIBUTING.md`](CONTRIBUTING.md).
+Clearer explanations, fixes, and new demos are very welcome — see **[`CONTRIBUTING.md`](CONTRIBUTING.md)**.
 
 ## License
 
-[MIT](LICENSE) — free to use, learn from, and build on.
+Released under the [MIT License](LICENSE) — free to use, learn from, and build on.
 
 ---
 
-## Author
+<h3 align="center">Built by Itay Beeri</h3>
 
-Created by **Itay Beeri**.
+<p align="center">
+  <a href="https://github.com/Itaybeeri"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-@Itaybeeri-0B0F17?style=for-the-badge&logo=github&logoColor=white"></a>
+  <a href="https://www.linkedin.com/in/itaybeeri/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-itaybeeri-2AA9C9?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+</p>
 
-- GitHub: [@Itaybeeri](https://github.com/Itaybeeri)
-- LinkedIn: [itaybeeri](https://www.linkedin.com/in/itaybeeri/)
-
-If this helped you understand how LLMs really work, a ⭐ on the repo is appreciated — and I'd love to hear
-about it on LinkedIn.
+<p align="center">
+  <sub>If this helped you understand how LLMs really work, a ⭐ on the repo means a lot — and I'd love to hear about it on LinkedIn.</sub>
+</p>
