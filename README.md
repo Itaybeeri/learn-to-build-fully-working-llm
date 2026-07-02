@@ -71,16 +71,20 @@ number at a time, blend word vectors with attention, and train the tiny GPT.
 
 ## Quickstart
 
-You'll need [**Claude Code**](https://claude.com/claude-code) (the tutor runs inside it) and, for the
-Module 2+ demos, **Python 3.12**.
+You'll need an AI coding agent to run the tutor — [**Claude Code**](https://claude.com/claude-code) or
+[**Codex**](https://openai.com/codex/) both work — and, for the Module 2+ demos, **Python 3.12**.
 
 ```bash
 git clone https://github.com/Itaybeeri/learn-to-build-fully-working-llm.git
 cd learn-to-build-fully-working-llm
 ```
 
-Then **open the folder in Claude Code and just say hi** — the tutor greets you, asks a couple of quick
+Then **open the folder in your agent and just say hi** — the tutor greets you, asks a couple of quick
 questions, and begins at Module 0 automatically. (You can also run **`/start`** explicitly.)
+
+> **Using Codex?** It reads [`AGENTS.md`](AGENTS.md) automatically, so "say hi" just works. For the
+> `/start` · `/continue` · `/recap` commands, copy the prompt files in [`codex/prompts/`](codex/prompts/)
+> into `~/.codex/prompts/` (see that folder's README) — optional, since auto-start covers you.
 
 | Command | What it does |
 |---|---|

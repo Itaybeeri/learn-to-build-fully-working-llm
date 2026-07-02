@@ -24,3 +24,5 @@ Thumbs.db
 # Logs / scratch
 *.log
 tmp/
+
+claude-workspace.code-workspace
