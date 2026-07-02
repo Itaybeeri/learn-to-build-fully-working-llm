@@ -54,6 +54,19 @@ number at a time, blend word vectors with attention, and train the tiny GPT.
   <img src="docs/media/portal.png" alt="The interactive learning portal — a single neuron demo with a live network diagram, sliders, and the five-stage forward pass narrated number by number" width="88%">
 </p>
 
+<table>
+  <tr>
+    <td width="33%"><img src="docs/media/wordmap.png" alt="Word map — words as points in a meaning space"></td>
+    <td width="33%"><img src="docs/media/attention.png" alt="Attention blend — a word rewrites itself from its neighbours"></td>
+    <td width="33%"><img src="docs/media/conceptmap.png" alt="Concept map — the whole curriculum as one connected diagram"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub><b>Embeddings</b> — words as points; do <code>king − man + woman</code></sub></td>
+    <td align="center"><sub><b>Attention</b> — a word blends in its neighbours</sub></td>
+    <td align="center"><sub><b>Concept map</b> — the whole curriculum, connected</sub></td>
+  </tr>
+</table>
+
 <p align="center"><sub>Open <code>docs/learn/portal/index.html</code> in any browser — no install, no build step.</sub></p>
 
 ## Quickstart
