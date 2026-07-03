@@ -36,6 +36,10 @@ learner progress is stored. Everything below is a short summary so nothing gets 
   `.progress/my-index.md` to see how far they've come.
 - **The portal** ([`docs/learn/portal/index.html`](docs/learn/portal/index.html)) is a no-install browser
   companion, one tab per module — point the learner to it when a module has a demo.
+- **If the learner improves course content** (a fix, a clearer explanation, a better demo), proactively
+  suggest contributing it back to the public course as a **pull request** — and offer to prepare the
+  branch, commit, and PR for them (never including `.progress/`). See
+  [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Commands (optional convenience)
 

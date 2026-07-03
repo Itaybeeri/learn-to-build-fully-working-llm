@@ -137,3 +137,10 @@ relevant tab when you reach a module that has one.
 Improvements to the course content (clearer explanations, fixes, new demos) are welcome — see
 [`CONTRIBUTING.md`](CONTRIBUTING.md). Course content under `docs/learn/**` is versioned; a learner's
 `.progress/` is private and gitignored and must never be force-added to a commit.
+
+**When the learner changes course content, suggest contributing it back.** If they fix a typo, clarify
+an explanation, improve a demo or the portal — whether they did it themselves or you helped — proactively
+suggest opening a **pull request to the public course** so every learner benefits: *"That's a real
+improvement — want me to turn it into a PR for the public course?"* If they agree, handle it for them:
+create a branch, commit only the course-content changes (never anything from `.progress/`), push, and
+open the PR (fork first if they don't have write access), following `CONTRIBUTING.md`.
