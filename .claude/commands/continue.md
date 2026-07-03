@@ -10,7 +10,10 @@ pick up where they left off. Re-establish context from disk (the conversation ma
 1. Read **`.progress/progress.md`** — the learner's private state (name, background, `current:` pointer,
    "where we are"). **If it does not exist**, this is a first run → behave like `/start` (onboard, then
    begin at Module 0). Stop and do that instead.
-2. Read `docs/learn/index.md` to place the current concept in the overall map.
+2. Read **`.progress/my-index.md`** (their personal checklist) and `docs/learn/index.md` to place the
+   current concept in the overall map. If `my-index.md` doesn't exist (a learner from an older version),
+   create it now: copy the outline from `docs/learn/index.md` and mark each concept `✅`/`🟡`/`⬜`
+   according to `progress.md`.
 3. Read the **current concept's note file**, and skim the **previous** note so your recap is accurate and
    you don't repeat or contradict it.
 
@@ -40,5 +43,7 @@ it again). Keep momentum: explain → question → guide to the answer → advan
 ## Saving progress
 
 After each part/concept is cleared, update **`.progress/progress.md`** (new `current:` pointer + a
-one-line "where we are"). That is the **only** file you write for progress — never edit the `⬜`/`✅`
-markers in `index.md`. Point the learner to the portal tab when a module has a demo.
+one-line "where we are") and flip the markers in **`.progress/my-index.md`** (`✅` what was just
+cleared, `🟡` what's next). Those are the only files you write — never write progress into
+`docs/learn/**`. Then invite the learner to open `.progress/my-index.md` to see how far they've come,
+and point them to the portal tab when a module has a demo.

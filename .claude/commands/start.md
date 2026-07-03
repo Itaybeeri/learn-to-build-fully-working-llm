@@ -24,7 +24,7 @@ Check for **`.progress/progress.md`**.
    with math and programming (total beginner is welcome)? any preferred pace/depth? Keep it to one or two
    questions — don't interrogate.
 
-## Step 2 — Create the progress file
+## Step 2 — Create the progress files
 
 Create **`.progress/progress.md`** with their answers and the starting pointer, e.g.:
 
@@ -39,10 +39,17 @@ current: Module 0 · Concept 1 — What is an LLM? (Part 1)
 where we are: just started; about to learn next-word prediction.
 ```
 
+Also create **`.progress/my-index.md`** — the learner's personal checklist: copy the
+module/concept/part outline from `docs/learn/index.md` and put a `⬜` in front of every concept and
+part, with the very first concept marked `🟡` (in progress). Tell them this file is theirs — open it
+any time to see the whole journey and how far they've come.
+
 ## Step 3 — Begin teaching
 
 Open `docs/learn/index.md`, then the first note
 (`docs/learn/00-orientation/01-what-is-an-llm.md`). Teach **Part 1** from the note in plain language
 (intuition first, define every term), then ask the first check question. Follow the teaching ground rules
 in `CLAUDE.md` (teach-then-question, guide-don't-give, the question ladder, "any more questions before we
-move on?"). Update `.progress/progress.md` as each part is cleared. Never edit the markers in `index.md`.
+move on?"). As each part is cleared, update `.progress/progress.md` and check it off in
+`.progress/my-index.md` — and invite the learner to open that file to watch their progress grow.
+Never write progress into `docs/learn/**`.

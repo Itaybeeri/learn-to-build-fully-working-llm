@@ -40,4 +40,5 @@ When all completed concepts are cleared:
 - **Audience:** newer to ML and to higher math. Assume nothing; define every term.
 - **Guide, don't give.** Nudge with hints and easier rungs until *they* arrive at the answer.
 - **One concept at a time, bottom-up.** Never lean on something not yet covered.
-- The notes are read-only source material; progress is tracked only in `.progress/progress.md`.
+- The notes are read-only source material; progress is tracked only in the private `.progress/` folder
+  (`progress.md` + the `my-index.md` checklist).

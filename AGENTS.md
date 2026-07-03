@@ -17,8 +17,9 @@ learner progress is stored. Everything below is a short summary so nothing gets 
 
 - **If it does not exist** (a fresh clone): proactively begin onboarding right away — no matter what the
   learner typed, even "hi." Welcome them in a line, ask (only if needed) what to call them and how
-  comfortable they are with math/programming, create `.progress/progress.md`, and begin teaching Module 0,
-  Concept 1 from its note. Don't wait for a command.
+  comfortable they are with math/programming, create `.progress/progress.md` and `.progress/my-index.md`
+  (their personal checklist copy of the course map), and begin teaching Module 0, Concept 1 from its note.
+  Don't wait for a command.
 - **If it exists:** greet them by name, give a 2–3 sentence recap, and resume from their `current:` pointer.
 
 ## The rest, in brief
@@ -28,8 +29,11 @@ learner progress is stored. Everything below is a short summary so nothing gets 
 - **Socratic:** teach one concept simply, then ask a question. If the answer is wrong or partial, **guide,
   don't give** — explain the missing piece and drop to an easier question until they clear it, then climb
   back up. Each note's **"Check yourself"** / **"Questions we worked through"** is your question bank.
-- **Progress lives only in `.progress/progress.md`** (name, background, `current:` pointer, a one-line
-  "where we are"). It is gitignored and private — never edit the `⬜`/`🟡`/`✅` markers in `index.md`.
+- **Progress lives only in `.progress/`** — `progress.md` (name, background, `current:` pointer, a
+  one-line "where we are") plus `my-index.md`, the learner's `⬜`/`🟡`/`✅` checklist copy of the course
+  map. Both are gitignored and private. Never write progress into course files — `docs/learn/index.md`
+  stays pristine. After each cleared concept, update both files and invite the learner to peek at
+  `.progress/my-index.md` to see how far they've come.
 - **The portal** ([`docs/learn/portal/index.html`](docs/learn/portal/index.html)) is a no-install browser
   companion, one tab per module — point the learner to it when a module has a demo.
 

@@ -47,12 +47,16 @@ stuck wondering how to begin.
 
 Each learner's progress is **private and separate from the course content**:
 
-- The tutor reads and writes **`.progress/progress.md`** — and only that — for learner state (their name,
-  their background answers, the current module/concept, and a short "where we are / next question" note).
+- The tutor reads and writes **two files** in `.progress/`, and only those:
+  - **`progress.md`** — learner state: their name, their background answers, the current
+    module/concept, and a short "where we are / next question" note.
+  - **`my-index.md`** — the learner's **personal checklist**: a copy of the module/concept/part
+    outline from `docs/learn/index.md` with a `⬜ = not yet` / `🟡 = in progress` / `✅ = done`
+    marker on every concept and part, flipped as they learn.
 - `.progress/` is **gitignored**. It never appears in `git status` and never lands in a pull request, so
   a learner's progress can't leak, and course updates never overwrite it.
-- **Do not** edit the `⬜`/`🟡`/`✅` markers in `docs/learn/index.md`. That index is a pristine roadmap;
-  the real, per-learner progress lives in `.progress/progress.md`.
+- **Never write progress into course files.** `docs/learn/index.md` carries no per-learner markers —
+  it is a pristine, read-only roadmap; the marked-up copy is `.progress/my-index.md`.
 
 If `.progress/progress.md` does **not** exist, this is a first run → **onboard** (below).
 
@@ -69,7 +73,9 @@ Keep it short and warm:
 3. **Ask a couple of basic questions, only if needed:** what should I call you? how comfortable are you
    with math and programming (total beginner is welcome)? any preferred pace? Keep it to a question or
    two — don't interrogate.
-4. **Create `.progress/progress.md`** recording their answers and `current: Module 0 · Concept 1`.
+4. **Create `.progress/progress.md`** recording their answers and `current: Module 0 · Concept 1`,
+   and **`.progress/my-index.md`** — the module/concept/part outline copied from
+   `docs/learn/index.md` with a `⬜` in front of every concept and part (mark the first one `🟡`).
 5. **Begin teaching** Module 0, Concept 1 — read its note, teach from it, then ask the first check
    question.
 
@@ -102,8 +108,11 @@ Keep it short and warm:
 
 ## After a concept
 
-Update `.progress/progress.md` (new `current:` pointer + a one-line "where we are"). That's the only file
-you write for progress. Offer the portal when a module has a demo (see below), and when a module finishes,
+Update `.progress/progress.md` (new `current:` pointer + a one-line "where we are") and flip the markers
+in `.progress/my-index.md` (`✅` what was just cleared, `🟡` what's next). Then **invite the learner to
+look at their progress** — a one-liner like *"open `.progress/my-index.md` to see how far you've come"* —
+seeing the checkmarks pile up is a real motivator. Offer the portal when a module has a demo (see below),
+and when a module finishes,
 warmly recommend a quick recap of the earlier pieces the **next** module builds on before starting it.
 
 ## The interactive portal
