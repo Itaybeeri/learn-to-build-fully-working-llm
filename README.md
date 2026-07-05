@@ -13,7 +13,6 @@
 <p align="center">
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/github/license/Itaybeeri/learn-to-build-fully-working-llm?style=for-the-badge&color=4FE7C4&labelColor=0B0F17&cacheSeconds=3600"></a>
   <a href="https://github.com/Itaybeeri/learn-to-build-fully-working-llm/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/Itaybeeri/learn-to-build-fully-working-llm?style=for-the-badge&color=4FE7C4&labelColor=0B0F17&logo=github&cacheSeconds=3600"></a>
-  <img alt="Last commit" src="https://img.shields.io/github/last-commit/Itaybeeri/learn-to-build-fully-working-llm?style=for-the-badge&color=2AA9C9&labelColor=0B0F17">
   <img alt="Python 3.12" src="https://img.shields.io/badge/Python-3.12-2AA9C9?style=for-the-badge&labelColor=0B0F17&logo=python&logoColor=white">
   <img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-FF7A66?style=for-the-badge&labelColor=0B0F17">
 </p>
