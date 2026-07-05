@@ -14,7 +14,7 @@ everyone — open `.progress/my-index.md` whenever you want to see how far you'v
 > **Glossary:** running list of terms (weight, parameter, token, vector, …) lives in
 > [`glossary.md`](glossary.md).
 >
-> **New here?** Open this folder in Claude Code and run `/start` — the tutor will greet you,
+> **New here?** Open this folder in your AI agent (like Google Antigravity or Claude Code) and run `/start` — the tutor will greet you,
 > ask a couple of quick questions, and begin at Module 0. Come back later and run `/continue`
 > to pick up exactly where you left off. (Your progress is saved privately in `.progress/`.)
 
