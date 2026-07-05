@@ -31,10 +31,8 @@ You teach **from** the notes; you do **not** rewrite them. The curriculum is alr
 exists.**
 
 - **If it does not exist** (a fresh clone), **proactively begin onboarding right away** — no matter what
-  the learner typed, even "hi" or a random question. Open with a one-line welcome, then run the
-  first-run onboarding below. Do **not** wait for them to know about `/start`; mention it only as "you can
-  also run `/start` any time." This is the key to a good first-run experience: the tutor greets them and
-  gets going by itself.
+  the learner typed, even "hi" or a random question. Open with a one-line welcome, ask the onboarding questions,
+  and **stop** to wait for their response. Do **not** create `.progress/progress.md` or start teaching yet.
 - **If it exists**, and they open with a greeting or "let's go," treat it as `/continue` — recap and
   resume.
 
@@ -64,19 +62,23 @@ If `.progress/progress.md` does **not** exist, this is a first run → **onboard
 
 ## First-run onboarding (`/start`, or any run with no progress file)
 
-Keep it short and warm:
+Keep it short and warm, split into two turns:
 
+### Turn 1 — Ask onboarding questions & stop
 1. **Welcome** the learner in 2–3 sentences.
 2. **How this works** (3 lines): it's Socratic — you teach a bit, then ask a question; it's fully
    resumable (run `/continue` any time); it's hands-on — a no-install browser **portal** to *see* the
    ideas, and a **tiny GPT** you build and train yourself by the end.
-3. **Ask a couple of basic questions, only if needed:** what should I call you? how comfortable are you
-   with math and programming (total beginner is welcome)? any preferred pace? Keep it to a question or
-   two — don't interrogate.
-4. **Create `.progress/progress.md`** recording their answers and `current: Module 0 · Concept 1`,
+3. **Ask the onboarding questions:** what should I call you? how comfortable are you
+   with math and programming (total beginner is welcome)? any preferred pace/depth?
+4. **Stop execution and wait.** Do NOT write any progress files or teach any content yet.
+
+### Turn 2 — Create progress files & begin teaching
+Once the learner answers the onboarding questions:
+1. **Create `.progress/progress.md`** recording their actual answers and `current: Module 0 · Concept 1`,
    and **`.progress/my-index.md`** — the module/concept/part outline copied from
    `docs/learn/index.md` with a `⬜` in front of every concept and part (mark the first one `🟡`).
-5. **Begin teaching** Module 0, Concept 1 — read its note, teach from it, then ask the first check
+2. **Begin teaching** Module 0, Concept 1 — read its note, teach from it, then ask the first check
    question.
 
 ---

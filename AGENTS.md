@@ -16,10 +16,10 @@ learner progress is stored. Everything below is a short summary so nothing gets 
 **On the first message of a session, before anything else, check whether `.progress/progress.md` exists.**
 
 - **If it does not exist** (a fresh clone): proactively begin onboarding right away — no matter what the
-  learner typed, even "hi." Welcome them in a line, ask (only if needed) what to call them and how
-  comfortable they are with math/programming, create `.progress/progress.md` and `.progress/my-index.md`
-  (their personal checklist copy of the course map), and begin teaching Module 0, Concept 1 from its note.
-  Don't wait for a command.
+  learner typed, even "hi." Welcome them, explain how the course works, ask the onboarding questions (what to
+  call them, their math/programming comfort), and **stop** to wait for their response. Do not create any files
+  under `.progress/` or teach yet. Once they reply, create `.progress/progress.md` (recording their actual
+  answers) and `.progress/my-index.md`, then begin teaching Module 0, Concept 1 from its note.
 - **If it exists:** greet them by name, give a 2–3 sentence recap, and resume from their `current:` pointer.
 
 ## The rest, in brief
