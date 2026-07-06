@@ -81,7 +81,7 @@ Then **open the folder in your agent and just say hi** — the tutor greets you,
 
 > **Using Antigravity?** It reads [`AGENTS.md`](AGENTS.md) automatically, and the slash commands are loaded from `.agents/workflows/` out-of-the-box.
 > 
-> **Using Codex?** It reads [`AGENTS.md`](AGENTS.md) automatically, so "say hi" just works. For the `/start` · `/continue` · `/recap` commands, copy the prompt files in [`codex/prompts/`](codex/prompts/) into `~/.codex/prompts/` (see that folder's README) — optional, since auto-start covers you.
+> **Using Codex?** It reads [`AGENTS.md`](AGENTS.md) automatically, so "say hi" just works. The `/start` · `/continue` · `/recap` commands ship as Codex **skills** in [`.agents/skills/`](.agents/skills/) — checked into the repo and auto-discovered, so there's nothing to copy or install. Codex invokes skills with `$` (type `$start`, `$continue`, `$recap`) or picks them up on its own. *(A legacy prompt-copy fallback for older Codex versions lives in [`codex/prompts/`](codex/prompts/).)*
 
 | Command | What it does |
 |---|---|

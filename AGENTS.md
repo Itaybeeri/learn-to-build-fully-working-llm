@@ -46,7 +46,7 @@ learner progress is stored. Everything below is a short summary so nothing gets 
 The learner can also type these.
 - In **Claude Code**, they are loaded from `.claude/commands/`.
 - In **Antigravity CLI / IDE / App**, they are workspace-scoped workflows loaded automatically from `.agents/workflows/`.
-- In **Codex**, they are custom prompts — copy the files in [`codex/prompts/`](codex/prompts/) into your `~/.codex/prompts/` to enable them (see that folder's README).
+- In **Codex**, they are **skills** in [`.agents/skills/`](.agents/skills/), auto-discovered from the repo — invoke with `$start` · `$continue` · `$recap` (no copy needed). A legacy prompt-copy fallback for older Codex versions lives in [`codex/prompts/`](codex/prompts/).
 
 - **`/start`** — first run: onboard and begin at Module 0.
 - **`/continue`** — resume exactly where they left off.
