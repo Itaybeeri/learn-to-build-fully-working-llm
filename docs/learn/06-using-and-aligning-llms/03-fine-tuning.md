@@ -1,29 +1,5 @@
 # Fine-tuning — specializing a pre-trained model
 
-> **Status: complete.** ① **the two-stage idea** — the giant Module 5 training run (trillions of tokens,
-> months, huge $) is **pre-training**; it produces a broad **generalist**. To get a **specialist** (medical
-> Q&A, a company's email style, legal text) you do **not** train from scratch — you take the already
-> pre-trained model and **train it a little further on a small, targeted dataset**: **fine-tuning**. It's
-> dramatically cheaper because the model **already knows language, grammar, facts, reasoning** — specializing
-> is a *small adjustment on top*, not a fresh start. (By default fine-tuning nudges **all** weights but only
-> **gently**, on **little data**, for **few steps** — the cheapness is the good starting point + small
-> data/short run, not touching fewer weights. A variant that updates only a small subset comes in Part 3.)
-> ② **how it works mechanically** — nothing new: it's the **same Module 2 training loop** (forward → loss →
-> backprop → nudge), with three settings changed. (1) **Small, targeted data** (your domain, thousands–millions
-> of examples, not trillions). (2) **Small learning rate** — the step size is kept tiny because the weights are
-> **already good**; big steps would **overwrite** the general language/knowledge they hold, so you *gently*
-> tilt rather than bulldoze. (3) **Far fewer steps** (hours/days, not months). Same loop, small data, small
-> learning rate, few steps — the small LR + few steps are also a **safety setting** against forgetting (Part 3).
-> ③ **trade-offs** — (1) **catastrophic forgetting**: training hard on a narrow dataset **overwrites** the
-> weight values that encoded the model's general knowledge (the knowledge lives *in* those weights — there's no
-> backup), so it suddenly fails at everyday tasks it used to handle. Defenses: small LR + few steps, a **mixed
-> dataset** (blend general data with the specialty), **early stopping**. (2) **Full fine-tuning is still
-> heavy** — updating all billions of weights, and one full model copy per specialty. (3) The fix:
-> **parameter-efficient fine-tuning (PEFT / LoRA)** — **freeze** the entire original model and train only a
-> tiny add-on (a few million weights). Wins: cheap & storage-light (a small file per specialty, swappable), and
-> **no catastrophic forgetting** because the frozen base weights **can't be overwritten** — general knowledge
-> stays physically safe; you just *add* a specialty on top.
-
 ## In one sentence
 
 **Fine-tuning** takes a fully pre-trained, generalist model and trains it a little further on a small, targeted

@@ -1,15 +1,5 @@
 # Stage 2 — the model (embeddings → Transformer blocks → logits)
 
-> **Status: complete (7A / PyTorch).** We assemble the actual GPT, and **almost nothing is new** — every
-> piece is a Module 4 concept written in PyTorch. The forward path: ① **token embedding** (Module 3 lookup
-> table) **+** ② **positional embedding** (Module 4, learned table) → ③ **N Transformer blocks** each doing
-> `x = x + attention(norm(x))` then `x = x + feedforward(norm(x))` (Module 4: self-attention Q/K/V, multi-head,
-> feed-forward, residuals, layer norm) → ④ **final layer norm** → ⑤ **lm_head** (unembedding) → **logits**
-> (B, T, 65). The **one new detail** is the **causal mask**: a GPT predicts the *next* token, so each position
-> may attend only to itself and the **past** — we set future scores to −∞ before softmax. Verified: 159,937
-> parameters; forward turns `(16, 32)` ids into `(16, 32, 65)` logits; softmax sums to 1; untrained loss ≈
-> **4.37 ≈ ln(65)** = uniform random guessing (the number we'll drive down in Stage 3).
-
 ## The whole forward path
 
 ```

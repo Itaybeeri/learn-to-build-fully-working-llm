@@ -1,11 +1,5 @@
 # Scale-up — a bigger model for readable text (run on a CUDA GPU)
 
-> **Status: done ✅ — ran on an NVIDIA RTX 3070 (CUDA).** The `--big` preset in
-> `demo/tiny_gpt_pytorch.py` (a ~2.7M-parameter model, 17× the baseline) trained in a few minutes on the GPU:
-> loss fell **4.358 → train 1.393 / val 1.601** over 5000 steps, and the samples now contain **real English
-> words** ("your honour brother", "gentlemen", "death", "breath") instead of the letter-soup the 160k baseline
-> produced. Numbers and sample are pasted below.
-
 ## In one sentence
 
 **Scaling up** means turning the size knobs up — a wider embedding, more layers, a longer context, more

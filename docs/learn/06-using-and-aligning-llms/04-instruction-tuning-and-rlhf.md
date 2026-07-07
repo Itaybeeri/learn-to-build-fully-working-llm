@@ -1,33 +1,5 @@
 # Instruction tuning & RLHF — turning a text-predictor into a helpful assistant
 
-> **Status: complete.** ① **the problem** — after pre-training (and even ordinary fine-tuning) the model can
-> do exactly **one** thing: **predict the next token to continue text**. That's a brilliant autocomplete, but
-> autocomplete ≠ assistant. Give a **base model** an instruction like *"Write a poem about the sea"* and it may
-> just continue with *more* prompts ("Write a poem about the city…"), because on the web that line usually
-> appears in a **list of homework prompts** — the likely continuation is more prompts, not a poem. The model
-> has **no concept of "command" or "request"**; it only knows what text usually follows other text. Closing the
-> gap between *"continue text like the internet"* and *"do what I'm asking, helpfully/honestly/safely"* is
-> **alignment** — and instruction tuning (②) + RLHF (③) are how it's done. ② **instruction tuning (SFT)** —
-> the first, most direct fix: it's just **fine-tuning** aimed at a special dataset of thousands of human-written
-> **(instruction → good response) pairs**. "Supervised" fine-tuning because each example carries the
-> demonstrated correct answer (a human supervised it). The mechanism is **still plain next-token prediction** —
-> nothing new bolted on; only the *diet of text* changed. Having practiced thousands of cases where an
-> instruction is followed by a helpful answer, the model's **instinct** for "what follows an instruction" flips
-> from *"more prompts"* to *"the answer,"* and it **generalizes** — it learned the *pattern* "instruction →
-> comply," so it answers instructions never seen in training. SFT gets most of the way to an assistant, but has
-> a ceiling: it can only teach what humans bothered to write out, and "good" is hard to *demonstrate* yet easy
-> to *judge* — the gap RLHF (③) fills. ③ **RLHF (Reinforcement Learning from Human Feedback)** — built on the
-> asymmetry "good is easy to *judge*, hard to *demonstrate*." **Move 1 — the reward model:** instead of writing
-> perfect answers, humans **compare** — the SFT model generates two responses to a prompt and a human picks
-> which is better; tens of thousands of these comparisons train a **separate** network (the **reward model**)
-> that takes a prompt + response and outputs a **number** = how good a human would judge it. It turns fuzzy
-> human taste into a *score a machine can chase*, with no human in the loop afterward. **Move 2 —
-> reinforcement learning:** the assistant generates a response, the reward model **scores** it, and we **nudge
-> the assistant's weights toward higher-scoring responses** (generate → score → nudge → repeat). The model is
-> never shown "the right answer" — it's *rewarded* for good ones. Result: the assistant is shaped by **human
-> preference at scale**, learning hard-to-write-down qualities (helpful, honest, polite, refuses harm). A leash
-> keeps it from drifting too far from the SFT model (else it finds weird high-reward gibberish).
-
 ## In one sentence
 
 A pre-trained **base model** only knows how to continue text, so it ignores instructions; **alignment** —

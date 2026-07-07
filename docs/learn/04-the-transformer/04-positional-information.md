@@ -1,10 +1,5 @@
 # Positional information — giving the model a sense of word order
 
-> **Status: complete.** All three parts: ① the gap — attention is order-blind (a bag of words,
-> not a sequence); ② the fix — add a position vector to each token's embedding so the input
-> carries *what* + *where*; ③ how the position vectors are made — learned table vs. sinusoidal
-> wave formula.
-
 ## In one sentence
 
 **Positional information** is an extra "where am I?" signal added to each token's vector, because

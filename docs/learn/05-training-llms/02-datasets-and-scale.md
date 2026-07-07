@@ -1,14 +1,5 @@
 # Datasets & scale — the fuel, and why bigger won
 
-> **Status: complete.** ① where the text comes from (web is the bulk + books, Wikipedia, code) and how
-> much (**tokens**, in the **trillions**); self-supervision makes it assemblable, compute makes it
-> trainable; ② **quality** — raw web is mostly junk, *garbage in → garbage out* (the model becomes what it
-> reads), so the corpus is heavily cleaned: quality-filtering, **deduplication**, safety filtering, and
-> **quality often beats raw quantity**; ③ **scale** — three dials (data + parameters + compute) grown
-> *together*; **scaling laws** make "bigger = lower loss" smooth and *predictable*; and **emergent
-> abilities** switch on past a size threshold. Recipe: simple task + clean data + scale → predictably
-> better, plus new abilities for free.
-
 ## In one sentence
 
 An LLM is trained on a colossal pile of raw text — mostly the open web, plus books, Wikipedia, and code,

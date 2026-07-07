@@ -1,10 +1,5 @@
 # 7B — the same GPT in pure NumPy from scratch (backprop by hand)
 
-> **Status: ✅ complete — built, gradient-checked, trained, and generating.** The whole GPT is
-> reimplemented in `demo/tiny_gpt_numpy.py` with **no autograd** — every layer has a hand-written
-> `forward` and `backward`. The full model's gradients match a numeric check to **~1e-7**, and the
-> model trains (loss ~4.65 → ~2.07) and generates Shakespeare-shaped text, exactly like 7A.
-
 ## In one sentence
 
 7B rebuilds the exact same character-level GPT as 7A, but we compute every gradient ourselves —

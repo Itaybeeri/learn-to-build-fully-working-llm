@@ -1,14 +1,5 @@
 # Stage 1 — data & the character tokenizer (shared by 7A & 7B)
 
-> **Status: complete.** The first stage of the capstone, shared by both implementations. We use the **simplest
-> tokenizer: character-level** — one token per character — so the vocabulary is just the **65 unique
-> characters** in the text (no training, no merge rules, unlike BPE). Three pieces: (1) the **vocab + maps**
-> `stoi`/`itos` (char ↔ integer id — the embedding address book from Module 3); (2) **encode/decode** (string
-> ↔ list of ids, reversible); (3) **batches** via the **sliding window** (Module 5) — input **x** is a chunk of
-> `BLOCK_SIZE` chars, target **y** is the *same chunk shifted right by one*, so every label is the *next* char.
-> Verified running: vocab = 65, encode/decode round-trips, and a batch has shape `(BATCH_SIZE, BLOCK_SIZE)`
-> with `y` = `x` shifted by one.
-
 ## Why character-level here
 
 Module 3 taught sub-word tokenization (BPE) — the practical choice for big models. For the capstone we pick the

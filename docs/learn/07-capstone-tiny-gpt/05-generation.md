@@ -1,12 +1,5 @@
 # Stage 4 — generation (the model speaks)
 
-> **Status: ✅ complete — code written, run & mastery check cleared.** We load the trained weights (`tiny_gpt.pt`) and run the
-> **autoregressive loop**: forward pass → take the last position's scores → temperature + softmax → **sample**
-> one char → append → repeat. Starting from the prompt `"ROMEO:"`, the tiny 160k-param model produces
-> Shakespeare-*shaped* text — real play formatting (`NAME:` + newline + dialogue), English-textured words,
-> sensible punctuation — even though word-by-word it's still gibberish (that needs a bigger model + more
-> training). This is Module 0's "generation loop" made real.
-
 ## In one sentence
 
 **Generation** runs the trained model in a loop — predict the next character, sample one from the predicted

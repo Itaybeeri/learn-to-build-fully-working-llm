@@ -1,12 +1,5 @@
 # Next-token prediction — how the text teaches itself
 
-> **Status: complete.** ① the text *labels itself* — the next word is a free label, so raw text is
-> already a labeled dataset (self-supervised), which is why an LLM can learn from unlimited text; ② the
-> *sliding window* — every position in a sentence is its own (input = everything before, label = the
-> next word) example, so one sentence yields many and a book yields millions; ③ predicting the next word
-> *well*, across billions of ever-new sentences, leaves no shortcut but to genuinely learn grammar,
-> facts, meaning, and reasoning — the task is the **pressure**, understanding is what it forces.
-
 ## In one sentence
 
 An LLM learns by **self-supervised next-token prediction**: it hides the next word of real text, guesses

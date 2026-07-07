@@ -1,17 +1,5 @@
 # Overfitting vs. generalization
 
-> **Status: complete.** ① the core distinction — training only lowers loss on the *text we show* the
-> model, but a high-capacity model can lower that loss two ways: **memorize** the exact examples (brittle) or
-> **learn the underlying patterns** (transfers). Low training loss is only a *proxy*; what we actually want is
-> performance on **unseen** text. *Overfitting* = great on training data, weak on new data. *Generalization* =
-> learning patterns that work on inputs never seen. ② **detection** — split data into a **training set** and a
-> held-out **validation set** (never trained on, so it stays a fair stand-in for unseen text); watch both
-> losses — overfitting begins when they **split apart** (training loss keeps falling while validation loss
-> bottoms out and **rises**). ③ **causes & remedies** — three causes (model capacity too big for the data ·
-> too little/too repetitive data · training too long) each met by a remedy (right-size the model ·
-> more/cleaner/deduplicated data · **early stopping**), plus **regularization** (dropout, weight decay) that
-> actively makes memorizing harder. **Module 5 COMPLETE.**
-
 ## In one sentence
 
 **Overfitting** is when a model lowers its training loss by *memorizing* the specific training text instead of

@@ -1,13 +1,5 @@
 # What "learning" actually adjusts — the model's weight groups
 
-> **Status: complete.** ① the **inventory** — a Transformer's learnable weights aren't one blob but distinct
-> groups (embedding table, Q/K/V matrices, output W_O, the two feed-forward matrices, LayerNorm's γ/β, the
-> positional table if learned, the unembedding), all adjusted at once by gradient descent; ② **what each
-> group learns** — embeddings learn *meaning*, Q/K/V learn *relationships*, W_O *combines* heads, the FFN
-> *processes* and stores much of the *patterns/facts*; ③ **knowledge is distributed** (no single "Paris"
-> weight — facts live spread across thousands of weights) and **training only changes the weight values,
-> never the architecture** (the container's shape is fixed before training; learning just fills it).
-
 ## In one sentence
 
 "Learning" means **gradient descent simultaneously nudging every one of the model's weight groups** — the

@@ -1,9 +1,5 @@
 # The attention idea — letting words look at each other
 
-> **Status: complete.** All three parts written: ① why a fixed embedding isn't enough; ② the
-> idea — score by similarity, blend by relevance; ③ the weighted-average mechanic (a blend
-> whose weights sum to 1).
-
 ## In one sentence
 
 **Attention** is the step that lets every word in a sentence look at all the other words,

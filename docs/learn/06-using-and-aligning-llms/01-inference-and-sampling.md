@@ -1,19 +1,5 @@
 # Inference & sampling — turning the distribution into actual words
 
-> **Status: complete.** ① **inference & the sampling problem** — *inference* = running the trained model to
-> generate text (vs. *training* it). The model's final step gives a **probability distribution** over the
-> whole vocabulary (logits → softmax, from Module 4); something must then **choose one token** from it. The
-> simplest rule, **greedy / argmax** (always take the highest-probability token), is **deterministic** → the
-> same prompt gives the identical output every time, and tends to fall into bland repetition loops. Fix:
-> **sampling** — pick a token *at random in proportion to its probability* (a weighted die), buying variety
-> without chaos. ② **temperature** — a dial that reshapes the distribution before the die roll: **low** temp
-> *sharpens* it (top word dominates → near-greedy, reliable — good for facts); **high** temp *flattens* it
-> (long shots get a real chance → creative/risky — good for stories). ③ **top-k / top-p** — high temp lifts the
-> huge **junk tail** (tens of thousands of tiny-probability tokens whose total is substantial), so the die can
-> land on gibberish → incoherence. Fix: trim the tail *before* sampling. **Top-k** keeps a fixed number of top
-> tokens; **top-p (nucleus)** keeps the smallest set whose probabilities sum to *p* (e.g. 0.9) — top-k is a
-> fixed headcount, top-p **adapts** to the model's confidence (fewer when sure, more when unsure).
-
 ## In one sentence
 
 **Inference** is running the finished model to produce text, and **sampling** is the step that turns the

@@ -1,9 +1,5 @@
 # Self-attention (Q/K/V) — the attention idea, made precise and learnable
 
-> **Status: complete.** All three parts: ① one vector can't do three jobs → split into query/key/
-> value; ② the three are made by three learned weight matrices; ③ the full mechanic — score = q·k,
-> softmax → weights, blend = weighted sum of the value vectors.
-
 ## In one sentence
 
 **Self-attention** is the attention idea built for real: instead of a word using its one raw

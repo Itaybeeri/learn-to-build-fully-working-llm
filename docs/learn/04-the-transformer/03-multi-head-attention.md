@@ -1,9 +1,5 @@
 # Multi-head attention — several attentions in parallel, each catching a different relationship
 
-> **Status: complete.** All three parts: ① why one head isn't enough; ② the mechanism (h heads in
-> parallel → concatenate → ×W_O); ③ heads specialize via training, capturing many relationships at
-> once.
-
 ## In one sentence
 
 **Multi-head attention** runs several self-attention computations ("heads") side by side, each with

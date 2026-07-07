@@ -1,34 +1,5 @@
 # Limitations — hallucination and the other ceilings
 
-> **Status: complete.** ① **hallucination** — LLMs sometimes state false things with total confidence
-> (invent a book, cite a fake case, give a wrong date). The cause ties straight back to the model's one job:
-> predict the **most plausible** next token, *not the true one*. It has **no true/false check** and no "I don't
-> know" slot — so when it lacks the real answer it fills the gap with a plausible-*sounding* one. A true answer
-> and a fluent made-up one are the **same kind of thing** to it (both high-probability token sequences), so you
-> can't simply "tell it to be truthful" — there's **no truth-signal inside to switch on**. Made worse because
-> pre-training rewarded confident fluency (not "I'm unsure"), and knowledge is **distributed & lossy** (Module
-> 5) so recall is *reconstructive* and can blend into confident-but-wrong. Hallucination is a **consequence of
-> the design** (a plausibility machine, not a truth machine), reducible but not patchable away. ② **the other
-> limitations** — each traces back to "a fixed pile of weights predicting plausible tokens over a limited
-> window." **Knowledge cutoff:** knowledge lives in *frozen weights* set at training; inference doesn't change
-> them, so the model is stuck at its **cutoff date** (no today's news/prices). **Shaky math/reasoning:** it
-> doesn't *compute* — it predicts plausible tokens, so it pattern-matches what an answer "looks like"; fine on
-> common sums, drifts on novel multi-step ones. **Bias:** it learned the statistics of human text, so a lean in
-> the data becomes a lean in predictions (values in, values out — cleaning/RLHF dampen, can't scrub). **No
-> memory beyond the context window:** weights don't update when you chat (learning = changing weights, which
-> inference doesn't do), and it only sees what fits the finite window — exceed it or start a new chat and it's
-> gone. ③ **mitigations & why it's never fully solved** — the trick is to stop relying on the frozen weights
-> alone and give the model an **external source of truth at inference**. **Retrieval / RAG**
-> (Retrieval-Augmented Generation): fetch relevant real documents, paste them into the context window, and the
-> model answers **from that text** — turning an error-prone *recall* task into a *reading-comprehension* one
-> (and it can cite sources); attacks hallucination *and* the cutoff. **Tools / function-calling**: for
-> math/live-data/code, let the model **call a real calculator, search, or interpreter** instead of guessing.
-> **Grounding habits**: prompt for uncertainty, quote sources, human-verify. The crucial honesty: none of these
-> change what the model *is* — they feed better text in or outsource the weak part; underneath it's **still a
-> plausibility machine**, so it can misread a doc or misuse a tool. They **shrink** the problem, never
-> **delete** it — hence "always verify important outputs." Takeaway: an LLM is a superb
-> **plausible-language generator**, not a DB/calculator/truth-oracle.
-
 ## In one sentence
 
 An LLM **hallucinates** — confidently states falsehoods — because its only job is to produce the most

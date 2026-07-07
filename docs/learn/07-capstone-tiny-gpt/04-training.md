@@ -1,14 +1,5 @@
 # Stage 3 — training (the loss falls)
 
-> **Status: ✅ complete — code written, run, and mastery check cleared.** We run the **Module 2 training loop** on
-> the GPT: ① `get_batch` → ② `logits, loss = model(x, y)` (forward + cross-entropy) → ③ `loss.backward()`
-> (backprop — PyTorch computes all ~160k gradients automatically) → ④ `optimizer.step()` (nudge every weight
-> downhill), repeated `MAX_ITERS` times. New pieces vs. Module 2: the **optimizer (AdamW)** — a smarter
-> gradient descent (adaptive per-weight step + momentum) — and watching **train *and* validation** loss
-> together (Module 5: together-down = learning; val rising = overfitting). **Verified run:** loss fell from
-> ≈ ln(65) ≈ 4.4 down to **train 1.86 / val 1.94** over 3000 steps; the two curves fall *together* with only a
-> small gap → healthy learning, no real overfitting. Trained weights saved to `tiny_gpt.pt` for Stage 4.
-
 ## The loop (it's Module 2, on the GPT)
 
 ```

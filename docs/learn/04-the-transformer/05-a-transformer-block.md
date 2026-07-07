@@ -1,12 +1,5 @@
 # A transformer block — mix, then think (and how to stack it deep)
 
-> **Status: complete.** ① a block = attention sub-layer "mix" + feed-forward sub-layer "think";
-> ② residual connections — each sub-layer *adds* its result on top of its input instead of replacing
-> it (keeps the original, makes deep stacks trainable); ③ layer normalization — a reset before each
-> sub-layer that subtracts the mean (recenter) and divides by the spread (re-scale) so numbers don't
-> drift huge/tiny; ④ stacking N identical blocks between an input stage (embed + position) and an
-> output stage (final norm → logits → softmax) = a full Transformer / GPT. **This finishes Module 4.**
-
 ## In one sentence
 
 A **transformer block** is the repeatable building unit of a Transformer: first an attention

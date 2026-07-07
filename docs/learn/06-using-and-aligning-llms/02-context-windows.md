@@ -1,24 +1,5 @@
 # Context windows — the model's field of vision
 
-> **Status: complete.** ① **what a context window is** — the **maximum number of tokens** the model can
-> attend over in a single forward pass (a.k.a. *context length*). It's a **hard ceiling baked into the model**
-> (GPT-2 ≈ 1,024; modern models 8K–1M+), measured in **tokens** (prompt + generated output share the same
-> budget). It is *not* a stored memory carried between requests — it's **how much text gets re-fed into the
-> model each step**. When the conversation grows past the window, the **earliest tokens are dropped entirely**:
-> not "remembered a little less" but simply **not fed in** — a hard cliff, not a fade. ② **why the limit
-> exists** — two costs. (1) **Attention is n²**: each of the n tokens in the window is scored against every
-> token (the Q·K step), so the work and memory grow with the **square** of the length — double the window and
-> the cost *quadruples*. This is the practical ceiling. (2) The **positional setup is fixed-size**: a learned
-> position table has a fixed number of rows set at training time, so a position past the last row has **no
-> vector** — the model can't even represent, let alone accept, a longer sequence. A structural ceiling. ③
-> **what happens at the edges** — when a conversation outgrows the window, the default is **truncation**: keep
-> the most recent tokens that fit and **drop the oldest**, so the window *slides* forward like a frame on a
-> filmstrip. This is lossy — early instructions/facts simply vanish (why long chats "forget the beginning";
-> why key instructions go at the *end* of the prompt). A smarter variant **summarizes** the old part into a few
-> tokens instead of dropping it. Separately, builders **enlarge** the window by attacking the same two Part-2
-> costs: **efficient attention** (each token attends only to nearby / a few summary tokens → n² shrinks toward
-> ~n) and **formula-based positions** (sinusoidal / RoPE → a vector for *any* length, beating the fixed table).
-
 ## In one sentence
 
 A **context window** is the maximum span of tokens the model can look at — prompt plus everything generated so

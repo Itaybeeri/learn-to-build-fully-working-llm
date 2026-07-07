@@ -1,12 +1,5 @@
 # Module 7 — Capstone: build a tiny GPT
 
-> **Status: in progress.** The finale: assemble everything from Modules 2–6 into a **runnable
-> character-level GPT** that trains on a small text and **generates new text**. We build it **twice**, same
-> architecture, two depths: **7A — PyTorch** (we write the forward pass; autograd handles backprop; it trains
-> fast and scales onto a GPU) and **7B — pure NumPy from scratch** (the same GPT with the forward *and* backward
-> hand-written — nothing hidden). Order: **7A first** (quick, testable, and a correctness reference), then
-> **7B** (check our hand-derived gradients against 7A). They share **Stage 1 (data & char tokenizer)**.
-
 ## What we're building (and what it can/can't do)
 
 A real GPT *architecturally* — char embeddings + positional info → N Transformer blocks (attention,
